@@ -1,0 +1,56 @@
+:root {
+  --background-color: #F0F0F0; /* Light Gray Background */
+  --text-color: #333333;    /* Dark Gray Text */
+  --accent-color: #666666;  /* Medium Gray Accent */
+  --main-font-weight: normal; /* Normal weight for readability */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow: hidden; /* 스크롤바 제거 */
+  font-weight: var(--main-font-weight);
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center main content horizontally */
+}
+
+.input-controls {
+  position: absolute; /* Position the container */
+  top: 5%; /* Same top position as previous TextInput */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  display: flex; /* Use flexbox for children */
+  align-items: center; /* Vertically align items in the container */
+  gap: 10px; /* Space between input and button */
+  z-index: 10; /* Ensure it's above Matter.js canvas */
+}
+
+.scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.ad-space {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #999999; /* Lighter gray for ad text on light background */
+  font-weight: normal;
+  z-index: 10;
+}

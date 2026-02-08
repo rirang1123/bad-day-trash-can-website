@@ -1,0 +1,29 @@
+.text-input {
+  /* position: absolute; top: 5%; removed */
+  width: 1000px; /* Fixed width */
+  background-color: transparent;
+  border: 1px solid var(--text-color); /* 얇은 테두리 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  /* box-shadow removed */
+  padding: 10px;
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: var(--main-font-weight);
+  color: var(--text-color); /* 텍스트 색상 */
+  z-index: 10;
+  resize: none; /* Keep none, JS handles resize */
+  box-sizing: border-box;
+  line-height: 1.5;
+  overflow: hidden; /* Hide scrollbar */
+  min-height: 40px; /* Ensure minimum height */
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: var(--accent-color); /* 포커스 시 액센트 색상 */
+}
+
+.text-input::placeholder {
+  color: var(--text-color); /* 플레이스홀더 색상 */
+  opacity: 0.7; /* 약간 투명하게 */
+}

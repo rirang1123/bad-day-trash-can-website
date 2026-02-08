@@ -1,0 +1,21 @@
+.clear-button {
+  /* position: absolute; bottom: 5%; left: 50%; transform: translateX(-50%); removed */
+  
+  background-color: transparent; /* 배경을 투명하게 */
+  color: var(--text-color); /* 텍스트 색상에 맞춤 */
+  border: 1px solid var(--text-color); /* 미묘한 테두리 */
+  border-radius: 8px; /* 둥근 모서리 */
+  padding: 8px 15px; /* 패딩 줄임 */
+  font-size: 1rem; /* 글자 크기 줄임 */
+  cursor: pointer;
+  font-weight: normal; /* 덜 굵게 */
+  z-index: 10;
+  transition: background-color 0.2s ease, transform 0.2s ease; /* 부드러운 전환 효과 */
+  /* box-shadow removed */
+  margin-left: 10px; /* Space from TextInput */
+}
+
+.clear-button:hover {
+  background-color: rgba(171, 178, 191, 0.1); /* 호버 시 미묘한 배경 */
+  /* transform: translateX(-50%); removed because it was for absolute positioning */
+}
